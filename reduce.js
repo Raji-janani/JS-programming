@@ -8,10 +8,17 @@ const user = [
 // age>30 [rajan, senthil]
 
 
-const output = user.reduce((acc,curr)=>{
-  if(curr.age > 30){
-    acc.push(curr.firstname);
-  }
-  return acc;
-},[])
+// const output = user.reduce((acc,curr)=>{
+//   if(curr.age > 30){
+//     acc.push(curr.firstname);
+//   }
+//   return acc;
+// },[])
+
+
+// Use of filter and map
+const output = user.filter((per)=>{
+  return (per.age > 30) 
+}).map((per)=>per.firstname)
+
 console.log(output)
